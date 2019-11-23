@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
+export const Dish = [
+  {title: 'Shaurma-Falafel', price: 155},
+  {title: 'Burger-Falafel', price: 110},
+  {title: 'Pita-Falafel', price: 120},
+  {title: 'Pizza-Vegetables', price: 550},
+  {title: 'Cake-Coconut', price: 1500},
+  {title: 'Juice-Orange', price: 210}
+];
+
+class App extends Component {
+  state = {
+    Check: [
+
+    ]
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
   );
 }
 
