@@ -7,6 +7,7 @@ import pita from './img/pita.jpg';
 import pizza from './img/pizza.jpg';
 import cake from './img/cake.jpg';
 import orange from './img/orange.jpg';
+import List from "./Components/List/List";
 
 export const Food = [
   {title: 'Shaurma-Falafel', price: 155, recipe:'chickpeas, salad, tofu sauce, lavash', img:lavash},
@@ -19,7 +20,7 @@ export const Food = [
 
 class App extends Component {
   state = {
-    Check: [
+    list: [
 
     ]
   };
@@ -27,8 +28,10 @@ class App extends Component {
   render() {
     return(
         <div className='App'>
-          <Menu
+          <List
+              order='Order Details:'
           />
+          <Menu/>
         </div>
     )
   }

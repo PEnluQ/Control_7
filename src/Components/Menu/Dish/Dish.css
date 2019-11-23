@@ -1,3 +1,18 @@
+.box {
+    border: 2px dotted gold;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: linear-gradient(to bottom, #a9db80 0%,#96c56f 100%);
+    cursor: pointer;
+}
+.box:hover {
+    box-shadow:7px 7px 5px 0 rgba(50, 50, 50, 0.75);
+    border: 2px dotted #ff9933;
+}
 .imgDish {
     max-height: 80px;
+}
+.Dish__recipe {
+    color: gray;
 }

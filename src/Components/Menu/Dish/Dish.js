@@ -6,9 +6,9 @@ const Dish = props => {
     return(
         <div className='box'>
             <img className='imgDish' src={food.img} alt='Photo_Food'/>
-            <h5>{props.title}</h5>
-            <p>{props.recipe}</p>
-            <p>{props.price} som</p>
+            <h3>{props.title}</h3>
+            <p className='Dish__recipe'>Recipe: {props.recipe}</p>
+            <p className='Dish__price'>{props.price} som</p>
         </div>
     )
 };
