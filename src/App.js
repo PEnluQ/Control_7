@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Menu from "./Components/Menu/Menu";
 import List from "./Components/List/List";
-import nanoid from 'nanoid';
 import './App.css';
 
 import lavash from './img/lavash.jpg';
@@ -22,7 +21,7 @@ export const Food = [
 
 class App extends Component {
   state = {
-    list: [
+    List: [
       {title:'Shaurma-Falafel', count:0},
       {title:'Burger-Falafel', count:0},
       {title:'Pita-Falafel', count:0},
@@ -32,9 +31,13 @@ class App extends Component {
     ]
   };
 
-  addDish(){
-
-  }
+  plusDish = (index) => {
+    let list = [...this.state.List];
+    let food = {...list[index]};
+    food.count++;
+    list[index] = food;
+    this.setState({List:list});
+  };
 
   render() {
     return(
@@ -42,10 +45,13 @@ class App extends Component {
           <List
               order='Order Details:'
           />
-          <Menu/>
+          <Menu
+              add={this.plusDish}
+          />
         </div>
     )
   }
 }
+
 
 export default App;
