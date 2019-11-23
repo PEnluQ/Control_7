@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Menu from "./Components/Menu/Menu";
+import './App.css';
 import lavash from './img/lavash.jpg';
 import burger from './img/burger.jpg';
 import pita from './img/pita.jpg';
 import pizza from './img/pizza.jpg';
 import cake from './img/cake.jpg';
 import orange from './img/orange.jpg';
-import './App.css';
 
 export const Food = [
   {title: 'Shaurma-Falafel', price: 155, recipe:'chickpeas, salad, tofu sauce, lavash', img:lavash},
@@ -23,9 +24,14 @@ class App extends Component {
     ]
   };
 
-  return (
-
-  );
+  render() {
+    return(
+        <div className='App'>
+          <Menu
+          />
+        </div>
+    )
+  }
 }
 
 export default App;
