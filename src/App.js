@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Menu from "./Components/Menu/Menu";
+import List from "./Components/List/List";
+import nanoid from 'nanoid';
 import './App.css';
+
 import lavash from './img/lavash.jpg';
 import burger from './img/burger.jpg';
 import pita from './img/pita.jpg';
 import pizza from './img/pizza.jpg';
 import cake from './img/cake.jpg';
 import orange from './img/orange.jpg';
-import List from "./Components/List/List";
 
 export const Food = [
   {title: 'Shaurma-Falafel', price: 155, recipe:'chickpeas, salad, tofu sauce, lavash', img:lavash},
@@ -21,9 +23,18 @@ export const Food = [
 class App extends Component {
   state = {
     list: [
-
+      {title:'Shaurma-Falafel', count:0},
+      {title:'Burger-Falafel', count:0},
+      {title:'Pita-Falafel', count:0},
+      {title:'Pizza-Vegetables', count:0},
+      {title:'Cake-Coconut', count:0},
+      {title:'Juice-Orange', count:0}
     ]
   };
+
+  addDish(){
+
+  }
 
   render() {
     return(
